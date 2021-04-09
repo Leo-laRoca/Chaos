@@ -57,14 +57,6 @@ title('Chaos example - Lorenz butterfly');
 red_curve = animatedline('Color','r','LineWidth',1);
 
 for i=1:length(x_numerico)
-   if i>500000
-       addpoints(red_curve, x_numerico(i), y_numerico(i), z_numerico(i));
-       head = scatter3(x_numerico(i),y_numerico(i), z_numerico(i),'filled','MarkerFaceColor','r','MarkerEdgeColor','r');
-       addpoints(red_curve, x2_numerico(i), y2_numerico(i), z2_numerico(i));
-       head2 = scatter3(x2_numerico(i),y2_numerico(i), z2_numerico(i),'filled','MarkerFaceColor','r','MarkerEdgeColor','b');
-       drawnow limitrate ;
-       delete(head);
-   else  
     addpoints(curve, x_numerico(i), y_numerico(i), z_numerico(i));
     head = scatter3(x_numerico(i),y_numerico(i), z_numerico(i),'filled','MarkerFaceColor','b','MarkerEdgeColor','b');
     addpoints(red_curve, x2_numerico(i), y2_numerico(i), z2_numerico(i));
@@ -72,5 +64,4 @@ for i=1:length(x_numerico)
     drawnow limitrate ;
     delete(head);
     delete(head2);
-   end 
 end
